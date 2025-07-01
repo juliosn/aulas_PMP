@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.controller.dto.PokemonResponse;
 import com.example.demo.application.service.PokeApiService;
+import com.example.demo.controller.dto.PokemonContractResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,19 +9,18 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/pokemon")
 public class PokeApiController {
 
-    private final PokeApiService pokeApiService;
+    private final PokeApiService service;
 
-    public PokeApiController(PokeApiService pokeApiService) {
-        this.pokeApiService = pokeApiService;
+    public PokeApiController(PokeApiService service) {
+        this.service = service;
     }
 
     @GetMapping("/{nomeOuId}")
-    public ResponseEntity<?> getPokemon(@PathVariable String nomeOuId) {
+    public ResponseEntity<?> get(@PathVariable String nomeOuId) {
         try {
-            PokemonResponse response = pokeApiService.buscarPokemon(nomeOuId);
-            return ResponseEntity.ok(response);
+            return ResponseEntity.ok(service.buscar(nomeOuId));
         } catch (RuntimeException e) {
-            return ResponseEntity.status(404).body(e.getMessage());
+            return ResponseEntity.status(404).body("Pokémon não encontrado: " + nomeOuId);
         }
     }
 }

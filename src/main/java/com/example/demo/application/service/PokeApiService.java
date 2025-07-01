@@ -1,27 +1,19 @@
 package com.example.demo.application.service;
 
-import com.example.demo.controller.dto.PokemonResponse;
-import org.springframework.cache.annotation.Cacheable;
+import com.example.demo.controller.dto.PokemonContractResponse;
+import com.example.demo.domain.ports.PokeApiPort;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class PokeApiService {
 
-    private final RestTemplate restTemplate;
+    private final PokeApiPort apiPort;
 
-    public PokeApiService() {
-        this.restTemplate = new RestTemplate();
+    public PokeApiService(PokeApiPort apiPort) {
+        this.apiPort = apiPort;
     }
 
-    @Cacheable("pokemon")
-    public PokemonResponse buscarPokemon(String nomeOuId) {
-        String url = "https://pokeapi.co/api/v2/pokemon/" + nomeOuId.toLowerCase();
-        try {
-            return restTemplate.getForObject(url, PokemonResponse.class);
-        } catch (HttpClientErrorException.NotFound e) {
-            throw new RuntimeException("Pokémon não encontrado: " + nomeOuId);
-        }
+    public PokemonContractResponse buscar(String nomeOuId) {
+        return apiPort.buscarPokemon(nomeOuId);
     }
 }
