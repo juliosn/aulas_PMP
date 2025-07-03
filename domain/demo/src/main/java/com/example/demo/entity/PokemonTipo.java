@@ -1,6 +1,6 @@
 package com.example.demo.entity;
 
-public record PokemonType(
+public record PokemonTipo(
         String tipo
 ) {
 }

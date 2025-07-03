@@ -1,13 +1,13 @@
 package com.example.demo.repository;
 
-import com.example.demo.entity.Cliente;
+import com.example.demo.entity.User;
 
 public interface UserRepository {
-    Cliente save(Cliente cliente);
+    User save(User user);
 
-    Cliente findByName(String name);
+    User findById(String id);
 
-    Cliente findById(String id);
+    User findByName(String name);
 
     void delete(String id);
 }
