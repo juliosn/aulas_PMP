@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springframework" />
+        <module name="domain" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aulas_PMP" target="1.5" />
+      <module name="domain (1) (br.com.fatec)" target="17" />
+      <module name="frete (1)" target="1.5" />
+      <module name="springframework (1) (br.com.fatec)" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="domain (1) (br.com.fatec)" options="-parameters" />
+      <module name="springframework" options="-parameters -parameters" />
+      <module name="springframework (1) (br.com.fatec)" options="-parameters" />
+    </option>
+  </component>
+</project>
