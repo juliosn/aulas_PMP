@@ -19,7 +19,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="domain" options="-parameters" />
+      <module name="domain" options="-parameters -parameters" />
       <module name="domain (1) (br.com.fatec)" options="-parameters" />
       <module name="springframework" options="-parameters -parameters" />
       <module name="springframework (1) (br.com.fatec)" options="-parameters" />

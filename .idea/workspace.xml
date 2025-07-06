@@ -6,22 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="04010cae-2a09-4d86-ae95-d5a61a776d6b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frete/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frete/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frete/springframework/src/main/java/br/com/fatec/frete/FreteApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/frete/springframework/src/main/java/br/com/fatec/frete/FreteApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frete/springframework/src/main/java/br/com/fatec/frete/configuration/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/frete/springframework/src/main/java/br/com/fatec/frete/configuration/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frete/springframework/src/main/java/br/com/fatec/frete/integration/RabbitMQConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/frete/springframework/src/main/java/br/com/fatec/frete/integration/RabbitMQConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frete/springframework/src/test/java/br/com/fatec/frete/controller/FreteControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/frete/springframework/src/test/java/br/com/fatec/frete/controller/FreteControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokemon" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pokemon/domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/domain/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokemon/domain/src/main/java/br/com/fatec/pokemon/entity/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/domain/src/main/java/br/com/fatec/pokemon/entity/Endereco.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokemon/domain/src/main/java/br/com/fatec/pokemon/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/domain/src/main/java/br/com/fatec/pokemon/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokemon/domain/src/main/java/br/com/fatec/pokemon/service/UserPokemonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/domain/src/main/java/br/com/fatec/pokemon/service/UserPokemonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokemon/springframework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/springframework/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokemon/springframework/src/main/java/br/com/fatec/pokemon/PokemonApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/springframework/src/main/java/br/com/fatec/pokemon/PokemonApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/springframework/src/main/java/br/com/fatec/pokemon/configuration/CacheConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/springframework/src/main/java/br/com/fatec/pokemon/configuration/CacheConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokemon/springframework/src/main/java/br/com/fatec/pokemon/configuration/service/UserPokemonServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/springframework/src/main/java/br/com/fatec/pokemon/configuration/service/UserPokemonServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokemon/springframework/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/springframework/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/springframework/src/main/java/br/com/fatec/pokemon/integration/CepIntegrationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/springframework/src/main/java/br/com/fatec/pokemon/integration/CepIntegrationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/springframework/src/main/java/br/com/fatec/pokemon/integration/client/FeignErrorDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/springframework/src/main/java/br/com/fatec/pokemon/integration/client/FeignErrorDecoder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,20 +48,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.PokemonApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "aula2.1",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/JuliodaSilvaNeves/OneDrive - IBM/Desktop/aulas_PMP",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.29885057"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.PokemonApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aula2.1&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/JuliodaSilvaNeves/OneDrive - IBM/Desktop/aulas_PMP&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.29885057&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\JuliodaSilvaNeves\OneDrive - IBM\Desktop\aulas_PMP" />
