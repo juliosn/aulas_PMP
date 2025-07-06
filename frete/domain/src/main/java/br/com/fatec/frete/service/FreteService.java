@@ -17,7 +17,6 @@ public class FreteService {
     private final PedidoRepository repository;
     private final FreteEventPublisher publisher;
 
-    // Estados por faixa de valor
     private static final Set<String> ESTADOS_GRATIS = Set.of("SP", "PR");
     private static final Set<String> ESTADOS_VINTE = Set.of("RJ", "SC", "RS");
     private static final Set<String> ESTADOS_CINQUENTA = Set.of("MG", "MT", "MS", "ES");
@@ -28,6 +27,9 @@ public class FreteService {
     }
 
     public Pedido calcularFrete(User usuario, Endereco endereco) {
+        validarUsuario(usuario);
+        validarEndereco(endereco);
+
         String uf = endereco.uf().toUpperCase();
         double valorFrete;
 
@@ -41,15 +43,7 @@ public class FreteService {
             throw new BadRequestException("Não realizamos entregas para o estado: " + uf);
         }
 
-        // Ao construir o pedido, passe null para o ID
-        Pedido pedido = new Pedido(
-                null,
-                usuario,
-                endereco,
-                valorFrete,
-                StatusPedido.PROCESSANDO
-        );
-
+        Pedido pedido = new Pedido(null, usuario, endereco, valorFrete, StatusPedido.PROCESSANDO);
 
         Pedido salvo = repository.save(pedido);
         publisher.send(salvo);
@@ -64,7 +58,29 @@ public class FreteService {
         repository.delete(id);
     }
 
-    // Interface para publisher (será implementada na integração)
+    private void validarUsuario(User usuario) {
+        if (usuario == null) {
+            throw new BadRequestException("Usuário não pode ser nulo");
+        }
+        if (usuario.nome() == null || usuario.nome().isBlank()) {
+            throw new BadRequestException("Nome do usuário é obrigatório");
+        }
+        if (usuario.email() == null || usuario.email().isBlank()) {
+            throw new BadRequestException("Email do usuário é obrigatório");
+        }
+        // Pode adicionar validação de formato do email aqui se quiser
+    }
+
+    private void validarEndereco(Endereco endereco) {
+        if (endereco == null) {
+            throw new BadRequestException("Endereço não pode ser nulo");
+        }
+        if (endereco.uf() == null || endereco.uf().isBlank()) {
+            throw new BadRequestException("UF do endereço é obrigatória");
+        }
+        // Pode validar o CEP e outras partes aqui se quiser
+    }
+
     public interface FreteEventPublisher {
         void send(Pedido pedido);
     }

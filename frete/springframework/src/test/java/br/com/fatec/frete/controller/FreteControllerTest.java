@@ -55,7 +55,7 @@ class FreteControllerTest {
 
     @Test
     void deveRetornarPedidoPorId() throws Exception {
-        String pedidoId = "f93bca89-3c67-4c18-9217-dcc98efc555f";
+        String pedidoId = "6869da6a7cbd1a29cea869a9";
         Pedido pedido = new Pedido(pedidoId, usuario, endereco, 0.0, StatusPedido.PROCESSANDO);
 
         when(freteService.buscarPorId(pedidoId)).thenReturn(pedido);
