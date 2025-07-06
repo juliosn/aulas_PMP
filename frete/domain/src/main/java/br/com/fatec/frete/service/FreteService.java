@@ -6,6 +6,7 @@ import br.com.fatec.frete.exception.InternalServerException;
 import br.com.fatec.frete.repository.PedidoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.Cacheable;
 
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -26,6 +27,7 @@ public class FreteService {
         this.publisher = publisher;
     }
 
+    @Cacheable(value = "freteCache", key = "#endereco.uf")
     public Pedido calcularFrete(User usuario, Endereco endereco) {
         validarUsuario(usuario);
         validarEndereco(endereco);

@@ -12,7 +12,6 @@ public class FreteServiceConfig {
     @Bean
     public FreteEventPublisher fakePublisher() {
         return pedido -> {
-            // Não faz nada, pois esse é o consumidor
         };
     }
 

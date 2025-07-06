@@ -25,7 +25,6 @@ public class RabbitMQConsumer {
         try {
             LOG.info(">>> Pedido recebido da fila: {}", pedidoRecebido);
 
-            // Apenas processa o pedido diretamente, assumindo que já foi validado no producer
             User usuario = pedidoRecebido.usuario();
             Endereco endereco = pedidoRecebido.endereco();
 
